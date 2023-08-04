@@ -33,3 +33,12 @@ Fundamentals idea for executing NLP is to convert all the summries in the given 
 
 **Training and testing:**
 The test size may be manipulated according to the size of the input dataset. As the input dataset grows, it is advised to decrease the test size slighlty to avoid underfitting. Underfitting is amore likely scenario than overfitting in regards to this dataset as the summaries are highly diverse in nature after tokenization.
+
+**Accuracy Metrics:**
+Accuracy can be measured using accuracy_score or f1_score metrics but they pose error while converting float to string data types and hence cannot be used. 
+
+**K-Means Clustering:**(Refer to bug_prediction_kmeans.ipynb)
+
+**Note**: It is recommended that the notebook be run on an online console for minimizing errors while importing libraries.
+
+**Libraries used:**
