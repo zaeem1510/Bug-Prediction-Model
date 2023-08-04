@@ -14,4 +14,22 @@ The objectove was to develop an intelligent machine learning model that automate
 
 **Logistic Regression Model**(Refer to Bug_Prediction.ipynb in the main)
 
+**Note**: It is recommended that the notebook be run on an online console for minimizing errors while importing libraries.
+
 A detailed description of all the sections of code has been given in the notebook above each code snippet. 
+**Libraries used:**
+
+1) NumPy: NumPy is the fundamental package for scientific computing in Python. It is a Python library that provides a multidimensional array object, various derived objects (such as masked arrays and matrices), and an assortment of routines for fast operations on arrays, including mathematical, logical, shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, basic linear algebra, basic statistical operations, random simulation and much more.
+2) pandas: pandas is a Python package providing fast, flexible, and expressive data structures designed to make working with “relational” or “labeled” data both easy and intuitive. It aims to be the fundamental high-level building block for doing practical, real-world data analysis in Python.
+3) genism: Gensim is a Python library for topic modelling, document indexing and similarity retrieval with large corpora. Target audience is the natural language processing (NLP) and information retrieval (IR) community.
+
+**Note:** genism library needs to be manually installed on the machine to execute the functionality of NLP through it. If the notebook is run on an online console, the installation will happen autoatically through a dedicated section meant to download genism as a plugin/api.
+
+**Reading the file:**
+The file is read to the variable dataset through the read_excel method. This may be changed to read_csv according the file type that needs to be read.
+
+**Vectorization and Tokenization:**
+Fundamentals idea for executing NLP is to convert all the summries in the given dataset to tokens and then convert them to vectors. Two respective functions spacy_tokenizer and sent_vec hae been defined for this purpose.
+
+**Training and testing:**
+The test size may be manipulated according to the size of the input dataset. As the input dataset grows, it is advised to decrease the test size slighlty to avoid underfitting. Underfitting is amore likely scenario than overfitting in regards to this dataset as the summaries are highly diverse in nature after tokenization.
