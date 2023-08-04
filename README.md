@@ -24,6 +24,7 @@ A detailed description of all the sections of code has been given in the noteboo
 2) pandas: pandas is a Python package providing fast, flexible, and expressive data structures designed to make working with “relational” or “labeled” data both easy and intuitive. It aims to be the fundamental high-level building block for doing practical, real-world data analysis in Python.
 3) genism: Gensim is a Python library for topic modelling, document indexing and similarity retrieval with large corpora. Target audience is the natural language processing (NLP) and information retrieval (IR) community.
 4) sklearn: Scikit-learn is an open source machine learning library that supports supervised and unsupervised learning. It also provides various tools for model fitting, data preprocessing, model selection, model evaluation, and many other utilities
+5) matplotlib: Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python.
 
 **Note:** genism library needs to be manually installed on the machine to execute the functionality of NLP through it. If the notebook is run on an online console, the installation will happen autoatically through a dedicated section meant to download genism as a plugin/api.
 
@@ -50,6 +51,7 @@ Accuracy can be measured using accuracy_score or f1_score metrics but they pose 
 2) pandas: pandas is a Python package providing fast, flexible, and expressive data structures designed to make working with “relational” or “labeled” data both easy and intuitive. It aims to be the fundamental high-level building block for doing practical, real-world data analysis in Python.
 3) nltk: It provides easy-to-use interfaces to over 50 corpora and lexical resources such as WordNet, along with a suite of text processing libraries for classification, tokenization, stemming, tagging, parsing, and semantic reasoning, wrappers for industrial-strength NLP libraries. **Note:** nltk will be downloaded automatically if the notebook is run on an online console but it needs to be installed manually on the machine if the notebook is run locally. 
 4) sklearn: Scikit-learn is an open source machine learning library that supports supervised and unsupervised learning. It also provides various tools for model fitting, data preprocessing, model selection, model evaluation, and many other utilities.
+5) matplotlib: Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python.
 
 **Reading the file:**
 The file is read to the variable dataset through the read_excel method. This may be changed to read_csv according the file type that needs to be read.
@@ -67,3 +69,8 @@ Similarity is calculated here on the basis of cosine similarity rather than eucl
 10 clusters were predetermined to classify the tickets into types. The number of clusters has a linear relationship with overfitting hence, to avoid overfitting, the number of clusters must be reduced and vice versa for underfitting.
 **Note:** The model was pickled to allow reloading the model by storing it in km. This step is not necessary but included to improve modularity.
 
+**Multidimensional Scaling:**
+Multidimensional scaling is used to convert the distance calculated earlier (through cosine similarity) into a 2-dimensioanl array containing the cooradinates of the tickets that can be plotted.
+
+**Visualization:**
+Cluster names and colors are defined in respective dictionaries. The tickets were clustered based on the assigned colours. Tickets with higher similarity are clustered together and the ones that have least similarity are the farthest. **Note:** The plot visualizes the distance between the vectorized tickets and hence has no dependence on the training of the model.
