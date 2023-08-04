@@ -59,3 +59,11 @@ Two respective functions were defined to tokeize and stem the summaries and only
 
 **Vectorization:**
 Term Frequency-Inverse Document Frequency was used to implement vectorization of the trainig dataset. Here, ngram_range takes unigrams, bigrams and trigrams into consideration. fit_transform method was called to scale the training dataset after finding the mean and standard deviation.
+
+**Note:** Here, it must be noted that only the x_train data was fitted and transformed (wihtout the y_train) and stored in matrix. This matrix was used in the following section to for modelling. This might be the possible source of error which does not allow the model to perform bug retrieval.
+
+Similarity is calculated here on the basis of cosine similarity rather than euclidean distance because the length of each summary is different. The cosine similarity is calculated on the basis of angle where lesser the angle, higher the similarity(always in the range of 0 to 1)
+**K-means Clustering:**
+10 clusters were predetermined to classify the tickets into types. The number of clusters has a linear relationship with overfitting hence, to avoid overfitting, the number of clusters must be reduced and vice versa for underfitting.
+**Note:** The model was pickled to allow reloading the model by storing it in km. This step is not necessary but included to improve modularity.
+
