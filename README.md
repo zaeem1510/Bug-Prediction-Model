@@ -1,5 +1,6 @@
 # Bug-Prediction-Model
 Bug classification and similar bug retrieval using machine learning
+
 **Background:**
 Software deveopement teams often encounter numerous bugs during the develpment and maintenance phases. Identifying the types of bugs and efficiently resolving them is crucial for the delivering high-quality software. Manual bug classification and searching for solutions from the existing tickets can be time consuming and error prone.
 
@@ -22,6 +23,7 @@ A detailed description of all the sections of code has been given in the noteboo
 1) NumPy: NumPy is the fundamental package for scientific computing in Python. It is a Python library that provides a multidimensional array object, various derived objects (such as masked arrays and matrices), and an assortment of routines for fast operations on arrays, including mathematical, logical, shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, basic linear algebra, basic statistical operations, random simulation and much more.
 2) pandas: pandas is a Python package providing fast, flexible, and expressive data structures designed to make working with “relational” or “labeled” data both easy and intuitive. It aims to be the fundamental high-level building block for doing practical, real-world data analysis in Python.
 3) genism: Gensim is a Python library for topic modelling, document indexing and similarity retrieval with large corpora. Target audience is the natural language processing (NLP) and information retrieval (IR) community.
+4) sklearn: Scikit-learn is an open source machine learning library that supports supervised and unsupervised learning. It also provides various tools for model fitting, data preprocessing, model selection, model evaluation, and many other utilities
 
 **Note:** genism library needs to be manually installed on the machine to execute the functionality of NLP through it. If the notebook is run on an online console, the installation will happen autoatically through a dedicated section meant to download genism as a plugin/api.
 
@@ -42,3 +44,14 @@ Accuracy can be measured using accuracy_score or f1_score metrics but they pose 
 **Note**: It is recommended that the notebook be run on an online console for minimizing errors while importing libraries.
 
 **Libraries used:**
+
+1) NumPy: NumPy is the fundamental package for scientific computing in Python. It is a Python library that provides a multidimensional array object, various derived objects (such as masked arrays and matrices), and an assortment of routines for fast operations on arrays, including mathematical, logical, shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, basic linear algebra, basic statistical operations, random simulation and much more.
+2) pandas: pandas is a Python package providing fast, flexible, and expressive data structures designed to make working with “relational” or “labeled” data both easy and intuitive. It aims to be the fundamental high-level building block for doing practical, real-world data analysis in Python.
+3) nltk: It provides easy-to-use interfaces to over 50 corpora and lexical resources such as WordNet, along with a suite of text processing libraries for classification, tokenization, stemming, tagging, parsing, and semantic reasoning, wrappers for industrial-strength NLP libraries. **Note:** nltk will be downloaded automatically if the notebook is run on an online console but it needs to be installed manually on the machine if the notebook is run locally. 
+4) sklearn: Scikit-learn is an open source machine learning library that supports supervised and unsupervised learning. It also provides various tools for model fitting, data preprocessing, model selection, model evaluation, and many other utilities.
+
+**Reading the file:**
+The file is read to the variable dataset through the read_excel method. This may be changed to read_csv according the file type that needs to be read.
+
+**Stemming and tokenizing:**
+Two respective functions were defined to tokeize and stem the summaries and only tokenize the summaries. Then, the stems of the tokens were appended to a list _totalvocab_tokenized_. 
