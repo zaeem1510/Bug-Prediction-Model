@@ -39,9 +39,10 @@ The test size may be manipulated according to the size of the input dataset. As 
 **Accuracy Metrics:**
 Accuracy can be measured using accuracy_score or f1_score metrics but they pose error while converting float to string data types and hence cannot be used. 
 
+
 **K-Means Clustering:**(Refer to bug_prediction_kmeans.ipynb)
 
-**Note**: It is recommended that the notebook be run on an online console for minimizing errors while importing libraries.
+**Note**: The model formed clusters of the training datset but was unable to predict an output due to It is recommended that the notebook be run on an online console for minimizing errors while importing libraries.
 
 **Libraries used:**
 
@@ -54,4 +55,7 @@ Accuracy can be measured using accuracy_score or f1_score metrics but they pose 
 The file is read to the variable dataset through the read_excel method. This may be changed to read_csv according the file type that needs to be read.
 
 **Stemming and tokenizing:**
-Two respective functions were defined to tokeize and stem the summaries and only tokenize the summaries. Then, the stems of the tokens were appended to a list _totalvocab_tokenized_. 
+Two respective functions were defined to tokeize and stem the summaries and only tokenize the summaries. Then, the stems of the tokens were appended to a list _totalvocab_tokenized_.
+
+**Vectorization:**
+Term Frequency-Inverse Document Frequency was used to implement vectorization of the trainig dataset. Here, ngram_range takes unigrams, bigrams and trigrams into consideration. fit_transform method was called to scale the training dataset after finding the mean and standard deviation.
